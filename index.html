@@ -118,6 +118,11 @@
                         scripting, sound design
                     </p>
 
+                    <p class="engine">
+                        <strong>Game Engine:</strong>
+                        Unity
+                    </p>
+
                     <div class="project-media">
 
                     <a href="images/MW.png" target="_blank">
@@ -206,20 +211,29 @@
                     </p>
 
                     <p>
-                        The dossier system adds a detective element, driven by
-                        the protagonist's growing curiosity about the lives of
-                        the people whose correspondence they read. Dossiers were 
-                        designed during the iteration process to 
-                        transform passive reading into active investigation.
-                        Players must recognize patterns, connect people and
-                        events, and gradually uncover an expanding conspiracy.
+                        Each letter is filled with clickable phrases the player
+                        can redact or leave visible. Two hidden stats track the
+                        consequences: a loyalty meter, and a violation count that
+                        separates "too lenient" from "too harsh", so both letting
+                        dangerous information through and over-censoring innocent
+                        details carry their own risks and feedback. In the background 
+                        runs a second, uncommunicated score tracking how
+                        much resistance-relevant information the player lets slip
+                        through, encouraging players to balance doing a good enough job to stay
+                        safe with supporting or sabotaging the revolutionaries' resistance.
                     </p>
 
                     <p>
-                        The two hidden variables create tension between the 
-                        protagonist's personal and broader societal consequences, 
-                        encouraging players to balance doing a good enough job to stay 
-                        safe with supporting or sabotaging the revolutionaries' resistance.
+                        The dossier system adds a detective element, driven by
+                        the protagonist's growing curiosity about the lives of
+                        the people whose correspondence they read. Dossiers were
+                        designed during the iteration process to
+                        transform passive reading into active investigation.
+                        Players must recognize patterns, connect people and
+                        events, and gradually uncover an expanding conspiracy.
+                        Fields are filled in through autocomplete and dropdown
+                        selections, with an underlying evaluation system that lets 
+                        players know whether their entries are on the right track.
                     </p>
 
                     <p>
@@ -254,6 +268,95 @@
 
             </details>
 
+            <!-- Prototype -->
+
+            <details class="project">
+
+                <summary>
+                    <div class="project-summary">
+                        <span class="project-title">Horror Puzzle Game Prototype</span>
+                        <span class="project-type">
+                            Puzzle · Solo Project
+                        </span>
+                    </div>
+                </summary>
+
+                <div class="project-content">
+
+                    <p class="role">
+                        <strong>My role:</strong>
+                        Game design, puzzle design, blueprint scripting
+                    </p>
+
+                    <p class="engine">
+                        <strong>Game Engine:</strong>
+                        Unreal Engine
+                    </p>
+
+                    <h3>Goals</h3>
+
+                    <p>
+                        A single puzzle level built around four door mechanisms 
+                        and one enemy type. There is no text-based tutorial; mechanics 
+                        are introduced through simple environmental situations where 
+                        the player can observe cause and effect and gradually build an 
+                        understanding of the level's rules.
+                    </p>
+
+                    <h3>Gameplay Design</h3>
+
+                    <p>
+                        The central mechanic is the relationship between light and the 
+                        environment. Light-sensitive enemies are immobilized by bright 
+                        light but become aggressive in darkness, while light-sensitive 
+                        doors are only open when the light is off. The enemy therefore 
+                        becomes a part of the puzzle, and players must learn to lure 
+                        them away, manipulate their position, or trap them in other 
+                        rooms to be able to pass.
+                    </p>
+
+                    <div class="project-media single-image">
+                    <a href="images/lvl.png" target="_blank">
+                    <img
+                        src="images/lvl.png"
+                        alt="Screenshot from Horror Puzzle Game Prototype"
+                    >
+                    </a>
+                    </div>
+
+                    <h3>Level Design</h3>
+
+                    <p>
+                        The level's complexity grows through layering. The player first 
+                        learns how light-sensitive doors work, and that other doors require 
+                        a key to be opened. Once these rules are established, button-controlled 
+                        doors are introduced, creating new possibilities within the systems the 
+                        player already understands. Once the player is comfortable with these 
+                        mechanics, portals are added, and already familiar mechanics become more 
+                        complex, further changing how spaces and previously learned 
+                        rules can be connected. Each new mechanic expands the possibilities of the 
+                        existing ones rather than replacing them.
+                    </p> 
+
+                    <p>
+                        The level culminates in a sequence combining all four systems, 
+                        testing the player's ability to apply a gradually developed understanding 
+                        of the environment.
+                    </p>
+
+                    <div class="project-media single-image video-embed">
+                        <iframe
+                            src="https://www.youtube.com/embed/3d9WbAUJdzA"
+                            title="Horror Puzzle Game Prototype demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                    <p class="video-caption">This is still a very early work-in-progress, so the video mainly shows 
+                        the core gameplay and level-design ideas rather than a polished final experience.</p>
+
+                </details>
 
             <!-- THE GIFT -->
 
@@ -274,6 +377,11 @@
                         <strong>My role:</strong>
                         Game design, narrative design, writing,
                         scripting, sound design
+                    </p>
+
+                    <p class="engine">
+                        <strong>Game Engine:</strong>
+                        Godot
                     </p>
 
                     <div class="project-media">
@@ -323,20 +431,34 @@
                     <h3>Gameplay & Narrative Design</h3>
 
                     <p>
-                        Rather than making a traditional combat system,
                         I designed enemy encounters to reinforce Mina's
-                        relationship with Jade. Every battle forces her to 
-                        split her attention between defending herself and 
-                        shielding Jade, mirroring the position she's in throughout the narrative.
+                        relationship with Jade. Combat is turn-based: each turn,
+                        Mina chooses to attack, shield Jade (absorbing his damage
+                        at a reduced rate), or protect herself.
+                        Jade never acts; he can only be defended. This forces a
+                        constant trade-off between offense and protection, mirroring
+                        the position Mina is in throughout the narrative.
+                    </p>
+
+                    <p>
+                        The two characters' health pools are deliberately asymmetric —
+                        Mina has significantly more HP than Jade — reinforcing her
+                        role as the resilient protector. If either character's HP
+                        hits zero, the game resets to the checkpoint at the start
+                        of the current chapter, and health is only ever partially
+                        restored between encounters, keeping resource management
+                        tense across a full chapter rather than a single fight.
                     </p>
 
                     <p>
                         The mechanics establish Jade's dependence on Mina from
                         the beginning, allowing the player to experience their
-                        relationship rather than simply learn about it through
-                        dialogue. The game's ending recontextualizes the player's previous
-                        actions and reinforces the game's central theme of
-                        sacrifice and emotional dependency.
+                        relationship through systemic pressure rather than simply
+                        learn about it through dialogue, which is delivered via a
+                        linear narrative branch structure. The game's ending
+                        recontextualizes the player's previous actions and
+                        reinforces the game's central theme of sacrifice and
+                        emotional dependency.
                     </p>
 
                     <div class="project-links">
@@ -373,6 +495,11 @@
                     <p class="role">
                         <strong>My role:</strong>
                         Narrative design, visuals, scripting, sound design
+                    </p>
+
+                    <p class="engine">
+                        <strong>Game Engine:</strong>
+                        Godot
                     </p>
 
                     <div class="project-media">
@@ -449,6 +576,11 @@
                     <p class="role">
                         <strong>My role:</strong>
                         Game design, scripting
+                    </p>
+
+                    <p class="engine">
+                        <strong>Game Engine:</strong>
+                        Godot
                     </p>
 
                     <div class="project-media">
@@ -573,3 +705,4 @@
 
 </body>
 </html>
+
