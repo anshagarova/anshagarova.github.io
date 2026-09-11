@@ -368,6 +368,26 @@
 
                 <h3>Technical Details</h3>
 
+                <p>
+                Take a look at the Blueprint logic behind some of the level’s mechanics.
+                </p> 
+
+                <p>
+                The system uses a central Light Manager that broadcasts light-state changes to anything 
+                listening for them. Rather than constantly polling the light state every frame, enemies and 
+                doors respond to a single event and update only when the state actually changes. This 
+                event-driven approach keeps the systems independent while allowing them to react to the 
+                same shared world state.
+                </p> 
+
+                <p>
+                <strong>AI Enemy Controller:</strong>
+                The AI listens for light-state changes. When the lights turn on, it stops moving and updates 
+                its Blackboard, allowing the Behavior Tree to react accordingly. It also uses AI Perception
+                to detect the player, which lets the AI distinguish between actively chasing the 
+                player and simply wandering around when the lights are off.
+                </p> 
+
                 <div class="project-media stacked-images">
 
                     <figure class="project-media-item">
@@ -380,6 +400,12 @@
                         <figcaption>Enemy controller logic</figcaption>
                     </figure>
 
+                <p>
+                <strong>Light-Sensitive Door:</strong>
+                The door listens for the same light-change event and automatically opens or closes based on 
+                the current state.
+                </p> 
+
                     <figure class="project-media-item">
                         <a href="images/light_sensetive_door.png" target="_blank">
                             <img
@@ -389,6 +415,13 @@
                         </a>
                         <figcaption>Light-sensitive door mechanism</figcaption>
                     </figure>
+                
+                <p>
+                <strong>Key-Gated Door:</strong>
+                The door checks the player’s inventory before allowing them through. If they have the key, 
+                it opens and removes the key from the inventory, making the interaction a single-use state 
+                change and to prevent the same key to be reused. 
+                </p> 
 
                     <figure class="project-media-item">
                         <a href="images/key_doors.png" target="_blank">
@@ -397,7 +430,7 @@
                                 alt="Blueprint screenshot from Horror Puzzle Game Prototype"
                             >
                         </a>
-                        <figcaption>Key-operated door mechanism</figcaption>
+                        <figcaption>Key-gated door mechanism</figcaption>
                     </figure>
 
                 </div>
@@ -589,7 +622,7 @@
                     <p>
                         The project stood out among the jam's submissions both thematically and visually,
                         and I'm proud of the narrative design and writing we
-                        achieved uunder such tight constraints: a 1,000-word limit 
+                        achieved under such tight constraints: a 1,000-word limit 
                         and a very limited number of assets to use.
                     </p>
 
