@@ -221,7 +221,8 @@ p {
     margin-top: 20px;
 }
 
-.project-media.single-image img {
+.project-media.single-image img,
+.project-media.stacked-images img {
     display: block;
     width: 100%;
     max-width: none;
@@ -250,8 +251,22 @@ p {
     border-radius: 3px;
 }
 
-
 .video-caption {
+    color: #777;
+}
+
+.project-media.stacked-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-media.stacked-images figure {
+    margin: 0;
+}
+
+.project-media.stacked-images figcaption {
+    margin-top: 8px;
     color: #777;
 }
 
