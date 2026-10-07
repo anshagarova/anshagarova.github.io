@@ -105,6 +105,7 @@ p {
     background: white;
     padding: 25px;
     border-radius: 10px;
+
 }
 
 .focus-item h4 {
@@ -138,9 +139,6 @@ p {
     border-left-color: #f5a623;
 }
 
-
-/* The clickable part of the card */
-
 .project summary {
     cursor: pointer;
     list-style: none;
@@ -154,9 +152,6 @@ p {
 .project summary:hover {
     background: #fff8ec;
 }
-
-
-/* Project title + category */
 
 .project-summary {
     display: flex;
@@ -179,11 +174,10 @@ p {
     letter-spacing: 0.5px;
 }
 
-/* Content inside opened card */
-
 .project-content {
     padding: 0 35px 40px;
     border-top: 1px solid #eee;
+    overflow: hidden;
 }
 
 .project-content p {
@@ -273,8 +267,6 @@ p {
     color: #777;
 }
 
-/* Project links */
-
 .project-links {
     margin-top: 25px;
 }
@@ -290,8 +282,6 @@ p {
     color: #222;
     border-bottom-color: #222;
 }
-
-/* Game Jam heading */
 
 .section-subtitle {
     margin-top: 60px;
