@@ -350,6 +350,26 @@ CV
     transform: translateY(-2px);
 }
 
+.contact-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.contact-photo {
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p:first-child {
+    margin-top: 0;
+}
+
 
 /* ------------------------------
    FOOTER
@@ -401,6 +421,17 @@ footer {
 
     .project-content {
         padding: 0 25px 30px;
+    }
+
+        .contact-layout {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .contact-photo {
+        width: 130px;
+        height: 130px;
     }
 
 }
